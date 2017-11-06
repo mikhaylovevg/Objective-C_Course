@@ -18,6 +18,9 @@
 		B2744FDF1FAFBC1900DC6D25 /* EMRunner.m in Sources */ = {isa = PBXBuildFile; fileRef = B2744FDE1FAFBC1900DC6D25 /* EMRunner.m */; };
 		B2744FE21FAFBC7300DC6D25 /* EMSwimmer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2744FE11FAFBC7300DC6D25 /* EMSwimmer.m */; };
 		B2744FE51FAFC3DA00DC6D25 /* EMRacer.m in Sources */ = {isa = PBXBuildFile; fileRef = B2744FE41FAFC3DA00DC6D25 /* EMRacer.m */; };
+		B2744FE81FB0CB7100DC6D25 /* EMAnimal.m in Sources */ = {isa = PBXBuildFile; fileRef = B2744FE71FB0CB7100DC6D25 /* EMAnimal.m */; };
+		B2A0F9D41FB0CE4A007846EA /* EMCat.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A0F9D31FB0CE4A007846EA /* EMCat.m */; };
+		B2A0F9D91FB0CED8007846EA /* EMDog.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A0F9D81FB0CED8007846EA /* EMDog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +44,12 @@
 		B2744FE11FAFBC7300DC6D25 /* EMSwimmer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMSwimmer.m; sourceTree = "<group>"; };
 		B2744FE31FAFC3DA00DC6D25 /* EMRacer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMRacer.h; sourceTree = "<group>"; };
 		B2744FE41FAFC3DA00DC6D25 /* EMRacer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMRacer.m; sourceTree = "<group>"; };
+		B2744FE61FB0CB7100DC6D25 /* EMAnimal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMAnimal.h; sourceTree = "<group>"; };
+		B2744FE71FB0CB7100DC6D25 /* EMAnimal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMAnimal.m; sourceTree = "<group>"; };
+		B2A0F9D21FB0CE4A007846EA /* EMCat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMCat.h; sourceTree = "<group>"; };
+		B2A0F9D31FB0CE4A007846EA /* EMCat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMCat.m; sourceTree = "<group>"; };
+		B2A0F9D71FB0CED8007846EA /* EMDog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDog.h; sourceTree = "<group>"; };
+		B2A0F9D81FB0CED8007846EA /* EMDog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDog.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,16 +82,8 @@
 		B2744FBC1FAFB8B300DC6D25 /* HW05Arrays */ = {
 			isa = PBXGroup;
 			children = (
-				B2744FD71FAFB93E00DC6D25 /* EMHuman.h */,
-				B2744FD81FAFB93E00DC6D25 /* EMHuman.m */,
-				B2744FDA1FAFBB7600DC6D25 /* EMBicyclist.h */,
-				B2744FDB1FAFBB7600DC6D25 /* EMBicyclist.m */,
-				B2744FDD1FAFBC1900DC6D25 /* EMRunner.h */,
-				B2744FDE1FAFBC1900DC6D25 /* EMRunner.m */,
-				B2744FE01FAFBC7300DC6D25 /* EMSwimmer.h */,
-				B2744FE11FAFBC7300DC6D25 /* EMSwimmer.m */,
-				B2744FE31FAFC3DA00DC6D25 /* EMRacer.h */,
-				B2744FE41FAFC3DA00DC6D25 /* EMRacer.m */,
+				B2A0F9D51FB0CE50007846EA /* Human */,
+				B2A0F9D61FB0CE71007846EA /* Animal */,
 				B2744FC01FAFB8B300DC6D25 /* AppDelegate.h */,
 				B2744FC11FAFB8B300DC6D25 /* AppDelegate.m */,
 				B2744FC31FAFB8B300DC6D25 /* ViewController.h */,
@@ -102,6 +103,36 @@
 				B2744FBE1FAFB8B300DC6D25 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B2A0F9D51FB0CE50007846EA /* Human */ = {
+			isa = PBXGroup;
+			children = (
+				B2744FD71FAFB93E00DC6D25 /* EMHuman.h */,
+				B2744FD81FAFB93E00DC6D25 /* EMHuman.m */,
+				B2744FDA1FAFBB7600DC6D25 /* EMBicyclist.h */,
+				B2744FDB1FAFBB7600DC6D25 /* EMBicyclist.m */,
+				B2744FDD1FAFBC1900DC6D25 /* EMRunner.h */,
+				B2744FDE1FAFBC1900DC6D25 /* EMRunner.m */,
+				B2744FE01FAFBC7300DC6D25 /* EMSwimmer.h */,
+				B2744FE11FAFBC7300DC6D25 /* EMSwimmer.m */,
+				B2744FE31FAFC3DA00DC6D25 /* EMRacer.h */,
+				B2744FE41FAFC3DA00DC6D25 /* EMRacer.m */,
+			);
+			name = Human;
+			sourceTree = "<group>";
+		};
+		B2A0F9D61FB0CE71007846EA /* Animal */ = {
+			isa = PBXGroup;
+			children = (
+				B2744FE61FB0CB7100DC6D25 /* EMAnimal.h */,
+				B2744FE71FB0CB7100DC6D25 /* EMAnimal.m */,
+				B2A0F9D21FB0CE4A007846EA /* EMCat.h */,
+				B2A0F9D31FB0CE4A007846EA /* EMCat.m */,
+				B2A0F9D71FB0CED8007846EA /* EMDog.h */,
+				B2A0F9D81FB0CED8007846EA /* EMDog.m */,
+			);
+			name = Animal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,7 +209,10 @@
 			files = (
 				B2744FC51FAFB8B300DC6D25 /* ViewController.m in Sources */,
 				B2744FC21FAFB8B300DC6D25 /* AppDelegate.m in Sources */,
+				B2A0F9D41FB0CE4A007846EA /* EMCat.m in Sources */,
 				B2744FE21FAFBC7300DC6D25 /* EMSwimmer.m in Sources */,
+				B2744FE81FB0CB7100DC6D25 /* EMAnimal.m in Sources */,
+				B2A0F9D91FB0CED8007846EA /* EMDog.m in Sources */,
 				B2744FE51FAFC3DA00DC6D25 /* EMRacer.m in Sources */,
 				B2744FBF1FAFB8B300DC6D25 /* main.m in Sources */,
 				B2744FDF1FAFBC1900DC6D25 /* EMRunner.m in Sources */,
@@ -342,6 +376,7 @@
 				B2744FD31FAFB8B300DC6D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

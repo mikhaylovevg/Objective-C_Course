@@ -12,6 +12,9 @@
 #import "EMRunner.h"
 #import "EMSwimmer.h"
 #import "EMRacer.h"
+#import "EMAnimal.h"
+#import "EMCat.h"
+#import "EMDog.h"
 
 @interface AppDelegate ()
 
@@ -58,7 +61,6 @@
     racer.age = 30;
     
     // level - pupil
-     
     NSArray* arrayOfHumans = [NSArray arrayWithObjects:human, bicyclist, runner, swimmer, nil];
 
     for (EMHuman* human in arrayOfHumans) {
@@ -73,7 +75,7 @@
     // level - student
     NSArray* arrayOfHumans2 = [[NSArray alloc] initWithObjects:human, bicyclist, runner, swimmer, racer, nil];
     
-    for (int i = [arrayOfHumans2 count] - 1; i >= 0; i--) {
+    for (NSInteger i = [arrayOfHumans2 count] - 1; i >= 0; i--) {
      
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", [arrayOfHumans2[i] name], [arrayOfHumans2[i] gender], [arrayOfHumans2[i] height], [arrayOfHumans2[i] weight]);
         
@@ -87,6 +89,82 @@
         }
         
     }
+    
+    NSLog(@"--------------------------------------------------------");
+    
+    //level - master
+    EMAnimal* animal = [[EMAnimal alloc] init];
+    [animal setType: @"animal"];
+    [animal setNickname: @"Rex"];
+    [animal setYear: 1];
+    
+    EMCat* cat = [[EMCat alloc] init];
+    [cat setType: @"cat"];
+    [cat setNickname: @"Kasha"];
+    [cat setYear: 2];
+    
+    EMDog* dog = [[EMDog alloc] init];
+    [dog setType: @"dog"];
+    [dog setNickname: @"Dzhulbars"];
+    [dog setYear: 5];
+    
+    NSArray* array = [NSArray arrayWithObjects:human, bicyclist, runner, swimmer, racer, animal, cat, dog, nil];
+    
+    
+    for (int i = 0; i < [array count]; i++) {
+        
+        if ([array[i] isKindOfClass:[EMHuman class]]) {
+            
+            EMHuman* somehuman = (EMHuman*) array[i];
+            
+            NSLog(@"Human");
+            NSLog(@"%@ - %@ - %.2f meters - %.1f kg", somehuman.name, somehuman.gender, somehuman.height, somehuman.weight);
+            
+            [human moving];
+        }
+        
+        if ([array[i] isKindOfClass:[EMAnimal class]]) {
+            
+            EMAnimal* animal = (EMAnimal*) array[i];
+            
+            NSLog(@"Animal");
+            NSLog(@"%@ - %@  - %d years old", animal.type, animal.nickname, animal.year);
+            
+            [animal moving];
+        }
+    }
+    NSLog(@"--------------------------------------------------------");
+
+    //level - star
+    NSArray* arrayOfAnimals = [NSArray arrayWithObjects: animal, cat, dog, nil];
+    
+    NSInteger count = 0;
+    if ([arrayOfAnimals count] > [arrayOfHumans2 count]) {
+        count = [arrayOfAnimals count];
+    } else {
+        
+    }
+    if ([arrayOfAnimals count] > [arrayOfHumans2 count]) {
+        count = [arrayOfAnimals count];
+    } else {
+        count = [arrayOfHumans2 count];
+    }
+    
+    for (int i = 0; i < count; i++) {
+        if (i < [arrayOfHumans2 count]) {
+            NSLog(@"HUMAN %@", [arrayOfHumans2[i] name]);
+        }
+        if (i < [arrayOfAnimals count]) {
+            NSLog(@"ANIMAL %@", [arrayOfAnimals[i] nickname]);
+        }
+    }
+    NSLog(@"--------------------------------------------------------");
+
+    //level - superstar
+    NSArray* totalArray = [NSArray arrayWithObjects: racer, animal, bicyclist, runner, cat, swimmer, dog, human, nil];
+    
+    
+    
     
     
     return YES;
