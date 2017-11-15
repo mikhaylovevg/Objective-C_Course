@@ -15,15 +15,21 @@
 #import "EMAnimal.h"
 #import "EMCat.h"
 #import "EMDog.h"
+/*
+ задание: чтобы не импортить всю эту простыню, попробуй сделать так, чтобы моно было заимпортить только два хедера:
+ #import "EMHumans.h"
+ #import "EMAnimals.h"
+*/
 
 @interface AppDelegate ()
-
+//  в интерфейсе ты ничего не объявляешь, он не нужен тут
 @end
 
 @implementation AppDelegate
-
+//  пустая трока
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //  мусорный коментарий в коде
     // Override point for customization after application launch.
     
     EMHuman *human         = [[EMHuman alloc] init];
@@ -62,11 +68,12 @@
     NSLog(@"----level pupil----");
     
     NSArray *arrayOfHumans = @[human, bicyclist, runner, swimmer];
-
+    //  в студенческом проекте можно допустить такое имя, но в боевых никто не использует префиксы array/set/dictionary. Это видно сразу при обращении. Тут достаточно использовать NSArray *humans = ...
+    
     for (EMHuman *human in arrayOfHumans) {
         
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", human.name, human.gender, human.height, human.weight);
-        
+        //  Задача: попробуй это логирование реализовать через переопределение description (https://developer.apple.com/documentation/objectivec/nsobject/1418799-description?language=objc)
         [human moving];
     }
     
@@ -75,7 +82,7 @@
     NSArray *someArrayOfHumans = @[human, bicyclist, runner, swimmer, racer];
     
     for (NSInteger i = [someArrayOfHumans count] - 1; i >= 0; i--) {
-        
+        //  обращение к свойству через точку, к методам через скобки. Тут someArrayOfHumans.count
         EMHuman *current = someArrayOfHumans[i];
         
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", current.name, current.gender, current.height, current.weight);
@@ -85,6 +92,7 @@
         if ([current isKindOfClass:[EMRacer class]]) {
             
             EMRacer* racer = (EMRacer*) someArrayOfHumans[i];
+            //   ошибка: ты работаешь с current, но после его проверки вытаскиваешь иной элемент из массива? Подозжреваю, что именно current ты хочешь форс-кастить
             
             NSLog(@"%@ %ld years old, car: %@", racer.name, (long)racer.age, racer.car);
         }
@@ -96,6 +104,7 @@
     [animal setType: @"animal"];
     [animal setNickname: @"Rex"];
     [animal setYear: 1];
+    //  обращение к проперти через точку
     
     EMCat *cat = [[EMCat alloc] init];
     [cat setType: @"cat"];
@@ -112,6 +121,7 @@
     for (NSInteger i = 0; i < [array count]; i++) {
         
         if ([array[i] isKindOfClass:[EMHuman class]]) {
+            //  доставай array[i] единожды и потом с ним рабоотай
             
             EMHuman *somehuman = (EMHuman *) array[i];
             
@@ -149,6 +159,7 @@
             EMAnimal *currentAnimal = arrayOfAnimals[i];
             
             NSLog(@"ANIMAL %@ - %@  - %d years old", currentAnimal.type, currentAnimal.nickname, currentAnimal.year);
+            //  есть warning
         }
     }
     
@@ -184,7 +195,7 @@
     return YES;
 }
 
-
+//  сгенерированный пустой код нужно удалить
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
