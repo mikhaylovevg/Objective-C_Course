@@ -11,6 +11,6 @@
 @interface EMRacer : EMHuman
 
 @property (strong, nonatomic) NSString *car;
-@property (assign, nonatomic) NSInteger age;
+@property (assign, nonatomic) NSUInteger age;
 
 @end

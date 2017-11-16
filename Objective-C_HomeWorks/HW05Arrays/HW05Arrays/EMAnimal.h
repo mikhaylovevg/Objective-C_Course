@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *nickname;
-@property (assign, nonatomic) NSInteger year;
+@property (assign, nonatomic) NSUInteger year;
 
 - (void) moving;
 
