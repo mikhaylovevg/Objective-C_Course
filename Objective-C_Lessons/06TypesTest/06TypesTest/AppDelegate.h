@@ -1,8 +1,8 @@
 //
 //  AppDelegate.h
-//  HW05Arrays
+//  06TypesTest
 //
-//  Created by Evgeny Mikhaylov on 06.11.17.
+//  Created by Evgeny Mikhaylov on 13.11.2017.
 //  Copyright © 2017 EM. All rights reserved.
 //
 
@@ -12,4 +12,6 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+
 @end
+

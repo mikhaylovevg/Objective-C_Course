@@ -21,16 +21,9 @@
  #import "EMAnimals.h"
 */
 
-@interface AppDelegate ()
-//  в интерфейсе ты ничего не объявляешь, он не нужен тут
-@end
-
 @implementation AppDelegate
-//  пустая трока
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    //  мусорный коментарий в коде
-    // Override point for customization after application launch.
     
     EMHuman *human         = [[EMHuman alloc] init];
     EMBicyclist *bicyclist = [[EMBicyclist alloc] init];
@@ -71,9 +64,9 @@
     //  в студенческом проекте можно допустить такое имя, но в боевых никто не использует префиксы array/set/dictionary. Это видно сразу при обращении. Тут достаточно использовать NSArray *humans = ...
     
     for (EMHuman *human in arrayOfHumans) {
-        
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", human.name, human.gender, human.height, human.weight);
         //  Задача: попробуй это логирование реализовать через переопределение description (https://developer.apple.com/documentation/objectivec/nsobject/1418799-description?language=objc)
+
         [human moving];
     }
     
@@ -81,63 +74,61 @@
     
     NSArray *someArrayOfHumans = @[human, bicyclist, runner, swimmer, racer];
     
-    for (NSInteger i = [someArrayOfHumans count] - 1; i >= 0; i--) {
-        //  обращение к свойству через точку, к методам через скобки. Тут someArrayOfHumans.count
+    for (NSInteger i = someArrayOfHumans.count - 1; i >= 0; i--) {
+
         EMHuman *current = someArrayOfHumans[i];
-        
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", current.name, current.gender, current.height, current.weight);
-        
         [current moving];
         
         if ([current isKindOfClass:[EMRacer class]]) {
-            
-            EMRacer* racer = (EMRacer*) someArrayOfHumans[i];
+
+            EMRacer* racer = (EMRacer *) someArrayOfHumans[i];
             //   ошибка: ты работаешь с current, но после его проверки вытаскиваешь иной элемент из массива? Подозжреваю, что именно current ты хочешь форс-кастить
             
-            NSLog(@"%@ %ld years old, car: %@", racer.name, (long)racer.age, racer.car);
+            NSLog(@"%@ %ld years old, car: %@", racer.name, racer.age, racer.car);
+
         }
     }
     
     NSLog(@"----level master----");
     
     EMAnimal *animal = [[EMAnimal alloc] init];
-    [animal setType: @"animal"];
-    [animal setNickname: @"Rex"];
-    [animal setYear: 1];
+
+    animal.type = @"animal";
+    animal.nickname = @"Rex";
+    animal.year = 1;
     //  обращение к проперти через точку
     
     EMCat *cat = [[EMCat alloc] init];
-    [cat setType: @"cat"];
-    [cat setNickname: @"Kasha"];
-    [cat setYear: 2];
+    cat.type = @"cat";
+    cat.nickname = @"Kasha";
+    cat.year = 2;
     
     EMDog *dog = [[EMDog alloc] init];
-    [dog setType: @"dog"];
-    [dog setNickname: @"Dzhulbars"];
-    [dog setYear: 5];
+    dog.type = @"dog";
+    dog.nickname = @"Dzhulbars";
+    dog.year = 5;
     
     NSArray *array = @[human, bicyclist, runner, swimmer, racer, animal, cat, dog];
     
-    for (NSInteger i = 0; i < [array count]; i++) {
+    for (NSInteger i = 0; i < array.count; i++) {
         
         if ([array[i] isKindOfClass:[EMHuman class]]) {
             //  доставай array[i] единожды и потом с ним рабоотай
             
-            EMHuman *somehuman = (EMHuman *) array[i];
+            EMHuman *someHuman = (EMHuman *) array[i];
             
             NSLog(@"%@", NSStringFromClass([EMHuman class]));
-            NSLog(@"%@ - %@ - %.2f meters - %.1f kg", somehuman.name, somehuman.gender, somehuman.height, somehuman.weight);
-            
-            [somehuman moving];
+            NSLog(@"%@ - %@ - %.2f meters - %.1f kg", someHuman.name, someHuman.gender, someHuman.height, someHuman.weight);
+            [someHuman moving];
             
         } else if ([array[i] isKindOfClass:[EMAnimal class]]) {
             
-            EMAnimal* animal = (EMAnimal *) array[i];
+            EMAnimal* someAnimal = (EMAnimal *) array[i];
             
             NSLog(@"%@", NSStringFromClass([EMAnimal class]));
-            NSLog(@"%@ - %@  - %d years old", animal.type, animal.nickname, animal.year);
-            
-            [animal moving];
+            NSLog(@"%@ - %@ - %ld years old", someAnimal.type, someAnimal.nickname, someAnimal.year);
+            [someAnimal moving];
         }
     }
     
@@ -145,82 +136,77 @@
 
     NSArray *arrayOfAnimals = @[animal, cat, dog];
     
-    NSInteger count = MAX([arrayOfAnimals count], [someArrayOfHumans count]);
+    NSInteger count = MAX(arrayOfAnimals.count, someArrayOfHumans.count);
     
     for (NSInteger i = 0; i < count; i++) {
-        if (i < [someArrayOfHumans count]) {
+        if (i < someArrayOfHumans.count) {
             
             EMHuman *currentHuman = someArrayOfHumans[i];
             
             NSLog(@"HUMAN %@ - %@ - %.2f meters - %.1f kg", currentHuman.name, currentHuman.gender, currentHuman.height, currentHuman.weight);
         }
-        if (i < [arrayOfAnimals count]) {
+        if (i < arrayOfAnimals.count) {
             
             EMAnimal *currentAnimal = arrayOfAnimals[i];
             
-            NSLog(@"ANIMAL %@ - %@  - %d years old", currentAnimal.type, currentAnimal.nickname, currentAnimal.year);
+            NSLog(@"ANIMAL %@ - %@  - %ld years old", currentAnimal.type, currentAnimal.nickname, currentAnimal.year);
             //  есть warning
+
         }
     }
     
     NSLog(@"----level superstar----");
 
-    //NSArray *totalArray = @[racer, animal, bicyclist, runner, cat, swimmer, dog, human];
-    /*
-    NSArray *sortedArray = [arrayOfAnimals sortedArrayUsingComparator:ˆNSComparisonResult:(id obj1, id obj2) {
-
-        
+    NSArray *totalArray = @[racer, dog, bicyclist, runner, cat, swimmer, animal, human];
+   
+    NSArray *sortedWithComparator = [someArrayOfHumans sortedArrayUsingComparator:^NSComparisonResult(EMHuman *p1, EMHuman *p2){
+        return [p1.name compare:p2.name];
     }];
-    */
-    /*
-    NSArray *sortedArray = [totalArray sortedArrayUsingComparator: ˆ(id obj1, id obj2){
-        if ([obj1 isKindOfClass:[EMHuman class]]) {
-            
-            EMHuman *s1 = obj1;
-            EMHuman *s2 = obj2;
-            
-            if (s1.name > s2.name) {
-                return (NSComparisonResult)NSOrderedAscending;
-            } else if s1.name > s2.name) {
-                return (NSComparisonResult)NSOrderedDescending;
-            }
-        }
-        
-        return (NSComparisonResult)NSOrderedSame;
-    }];
+    for (EMHuman *human in sortedWithComparator) {
+        NSLog(@"%@ - %@", NSStringFromClass([EMHuman class]), human.name);
+    }
     
-    return sortedArray;
-    */
+    NSSortDescriptor *nicknameSortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"nickname" ascending:YES];
+    
+    NSArray *sortedWithDescriptors = [arrayOfAnimals sortedArrayUsingDescriptors:@[nicknameSortDescriptor]];
+    for (EMAnimal *animal in sortedWithDescriptors) {
+        NSLog(@"%@ - %@", NSStringFromClass([EMAnimal class]), animal.nickname);
+    }
+    
+    NSArray *sortedArray = [totalArray sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSString *key1, *key2;
+        if ([obj1 isKindOfClass:[EMHuman class]]) {
+            EMHuman * current = (EMHuman *) obj1;
+            key1 = current.name;
+        } else if ([obj1 isKindOfClass:[EMAnimal class]]) {
+            EMAnimal * current = (EMAnimal *) obj1;
+            key1 = current.nickname;
+        }
+        if ([obj2 isKindOfClass:[EMHuman class]]) {
+            EMHuman * current = (EMHuman *) obj2;
+            key2 = current.name;
+        } else if ([obj2 isKindOfClass:[EMAnimal class]]) {
+            EMAnimal * current = (EMAnimal *) obj2;
+            key2 = current.nickname;
+        }
+        return [key1 compare:key2];
+    }];
+
+    for (NSInteger i = 0; i < [sortedArray count]; i++) {
+        
+        if ([array[i] isKindOfClass:[EMHuman class]]) {
+            
+            EMHuman *somehuman = (EMHuman *) array[i];
+            NSLog(@"%@ - %@", NSStringFromClass([EMHuman class]), somehuman.name);
+            
+        } else if ([array[i] isKindOfClass:[EMAnimal class]]) {
+            
+            EMAnimal* animal = (EMAnimal *) array[i];            
+            NSLog(@"%@ - %@", NSStringFromClass([EMAnimal class]), animal.nickname);
+        }
+    }
 
     return YES;
 }
-
-//  сгенерированный пустой код нужно удалить
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
-}
-
-
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-}
-
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-}
-
-
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-}
-
-
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
 
 @end

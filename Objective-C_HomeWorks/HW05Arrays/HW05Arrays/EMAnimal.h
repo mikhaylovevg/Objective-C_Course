@@ -12,7 +12,7 @@
 
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *nickname;
-@property (assign, nonatomic) NSInteger year;
+@property (assign, nonatomic) NSUInteger year;
 //  year может быть отрицательным? Если нет, какой тип лучше использовать?
 
 - (void) moving;
