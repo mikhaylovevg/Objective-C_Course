@@ -11,11 +11,8 @@
 @interface EMRacer : EMHuman
 
 @property (strong, nonatomic) NSString *car;
-<<<<<<< HEAD
-@property (assign, nonatomic) NSUInteger age;
-=======
 @property (assign, nonatomic) NSUInteger age;
 //  age может быть отрицательным?
->>>>>>> master
+
 
 @end

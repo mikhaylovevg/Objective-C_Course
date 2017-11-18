@@ -12,12 +12,8 @@
 
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSString *nickname;
-<<<<<<< HEAD
-@property (assign, nonatomic) NSUInteger year;
-=======
 @property (assign, nonatomic) NSUInteger year;
 //  year может быть отрицательным? Если нет, какой тип лучше использовать?
->>>>>>> master
 
 - (void) moving;
 
