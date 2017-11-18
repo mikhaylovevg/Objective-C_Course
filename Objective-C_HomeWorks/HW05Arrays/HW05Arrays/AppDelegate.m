@@ -15,10 +15,21 @@
 #import "EMAnimal.h"
 #import "EMCat.h"
 #import "EMDog.h"
+/*
+ задание: чтобы не импортить всю эту простыню, попробуй сделать так, чтобы моно было заимпортить только два хедера:
+ #import "EMHumans.h"
+ #import "EMAnimals.h"
+*/
 
+<<<<<<< HEAD
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+=======
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+>>>>>>> master
     
     EMHuman *human         = [[EMHuman alloc] init];
     EMBicyclist *bicyclist = [[EMBicyclist alloc] init];
@@ -56,9 +67,15 @@
     NSLog(@"----level pupil----");
     
     NSArray *arrayOfHumans = @[human, bicyclist, runner, swimmer];
-
+    //  в студенческом проекте можно допустить такое имя, но в боевых никто не использует префиксы array/set/dictionary. Это видно сразу при обращении. Тут достаточно использовать NSArray *humans = ...
+    
     for (EMHuman *human in arrayOfHumans) {
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", human.name, human.gender, human.height, human.weight);
+<<<<<<< HEAD
+        //  Задача: попробуй это логирование реализовать через переопределение description (https://developer.apple.com/documentation/objectivec/nsobject/1418799-description?language=objc)
+=======
+        //  Задача: попробуй это логирование реализовать через переопределение description (https://developer.apple.com/documentation/objectivec/nsobject/1418799-description?language=objc)
+>>>>>>> master
         [human moving];
     }
     
@@ -66,23 +83,45 @@
     
     NSArray *someArrayOfHumans = @[human, bicyclist, runner, swimmer, racer];
     
+<<<<<<< HEAD
     for (NSInteger i = someArrayOfHumans.count - 1; i >= 0; i--) {
+=======
+    for (NSInteger i = [someArrayOfHumans.count] - 1; i >= 0; i--) {
+>>>>>>> master
         EMHuman *current = someArrayOfHumans[i];
         NSLog(@"%@ - %@ - %.2f meters - %.1f kg", current.name, current.gender, current.height, current.weight);
         [current moving];
         
         if ([current isKindOfClass:[EMRacer class]]) {
+<<<<<<< HEAD
             EMRacer* racer = (EMRacer *) someArrayOfHumans[i];
+            //   ошибка: ты работаешь с current, но после его проверки вытаскиваешь иной элемент из массива? Подозжреваю, что именно current ты хочешь форс-кастить
+            
             NSLog(@"%@ %ld years old, car: %@", racer.name, racer.age, racer.car);
+=======
+            
+            EMRacer* racer = (EMRacer*) someArrayOfHumans[i];
+            //   ошибка: ты работаешь с current, но после его проверки вытаскиваешь иной элемент из массива? Подозжреваю, что именно current ты хочешь форс-кастить
+            
+            NSLog(@"%@ %ld years old, car: %@", racer.name, (long)racer.age, racer.car);
+>>>>>>> master
         }
     }
     
     NSLog(@"----level master----");
     
     EMAnimal *animal = [[EMAnimal alloc] init];
+<<<<<<< HEAD
     animal.type = @"animal";
     animal.nickname = @"Rex";
     animal.year = 1;
+    //  обращение к проперти через точку
+=======
+    animal.type = @"animal";
+    animal.nickname = @"Rex";
+    animal.year = 1;
+    //  обращение к проперти через точку
+>>>>>>> master
     
     EMCat *cat = [[EMCat alloc] init];
     cat.type = @"cat";
@@ -99,6 +138,7 @@
     for (NSInteger i = 0; i < array.count; i++) {
         
         if ([array[i] isKindOfClass:[EMHuman class]]) {
+            //  доставай array[i] единожды и потом с ним рабоотай
             
             EMHuman *someHuman = (EMHuman *) array[i];
             
@@ -133,7 +173,13 @@
             
             EMAnimal *currentAnimal = arrayOfAnimals[i];
             
+<<<<<<< HEAD
             NSLog(@"ANIMAL %@ - %@  - %ld years old", currentAnimal.type, currentAnimal.nickname, currentAnimal.year);
+            //  есть warning
+=======
+            NSLog(@"ANIMAL %@ - %@  - %ld years old", currentAnimal.type, currentAnimal.nickname, currentAnimal.year);
+            //  есть warning
+>>>>>>> master
         }
     }
     
@@ -191,4 +237,7 @@
     return YES;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> master
 @end
