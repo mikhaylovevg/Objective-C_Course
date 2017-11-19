@@ -10,7 +10,6 @@
 
 @implementation EMObject
 
-
 - (instancetype)init
 {
     self = [super init];
@@ -30,6 +29,5 @@
     return newObject;
     
 }
-
 
 @end

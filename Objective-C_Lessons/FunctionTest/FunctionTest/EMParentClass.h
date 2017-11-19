@@ -13,11 +13,11 @@
 + (void) whoAreYou;
 
 - (void) sayHello;
-- (void) say:(NSString*) string;
-- (void) say:(NSString*) string and:(NSString*) string2;
-- (void) say:(NSString*) string and:(NSString*) string2 andAfterThat:(NSString*) string3;
+- (void) say:(NSString *) string;
+- (void) say:(NSString *) string and:(NSString *) string2;
+- (void) say:(NSString *) string and:(NSString *) string2 andAfterThat:(NSString *) string3;
 
-- (NSString*) saySomeNumberString;
--(NSString*) saySomething;
+- (NSString *) saySomeNumberString;
+- (NSString *) saySomething;
 
 @end

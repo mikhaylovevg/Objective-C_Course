@@ -19,15 +19,11 @@
     return self;
 }
 
-
-- (NSString*) saySomeNumberString {
-    
+- (NSString *) saySomeNumberString {
     return @"Something!";
 }
 
-
--(NSString*) saySomething {
-    
+-(NSString *) saySomething {    
     return [super saySomeNumberString];
 }
 

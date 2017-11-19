@@ -10,7 +10,6 @@
 
 @implementation EMObject
 
-
 - (void) action {
     NSLog(@"%@ ACTION!!!", self.name);
 }

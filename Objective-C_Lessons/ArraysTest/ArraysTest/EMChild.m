@@ -10,7 +10,6 @@
 
 @implementation EMChild
 
-
 - (void) action {
     NSLog(@"%@ CHILD ACTION!!!", self.name);
 }

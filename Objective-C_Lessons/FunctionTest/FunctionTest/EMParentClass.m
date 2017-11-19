@@ -22,33 +22,28 @@
     NSLog(@"I AM EMParentClass %@", self);
 }
 
-
 - (void) sayHello {
     NSLog(@"Parent say hello! %@", self);
 }
 
-- (void) say:(NSString*) string {
+- (void) say:(NSString *) string {
     NSLog(@"%@", string);
 }
 
-- (void) say:(NSString*) string and:(NSString*) string2 {
+- (void) say:(NSString *) string and:(NSString *) string2 {
     NSLog(@"%@, %@", string, string2);
 }
 
-- (void) say:(NSString*) string and:(NSString*) string2 andAfterThat:(NSString*) string3 {
+- (void) say:(NSString *) string and:(NSString *) string2 andAfterThat:(NSString *) string3 {
     NSLog(@"%@, %@, %@", string, string2, string3);
 }
 
-
-- (NSString*) saySomeNumberString {
-    
+- (NSString *) saySomeNumberString {
     return [NSString stringWithFormat:@"%@", [NSDate date]];
 }
 
--(NSString*) saySomething {
-    
-    NSString* string = [self saySomeNumberString];
-    
+-(NSString *) saySomething {
+    NSString *string = [self saySomeNumberString];    
     return string;
 }
 

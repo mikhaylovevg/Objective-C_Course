@@ -10,6 +10,6 @@
 
 @interface EMChild : EMObject
 
-@property (strong, nonatomic) NSString* lastName;
+@property (strong, nonatomic) NSString *lastName;
 
 @end

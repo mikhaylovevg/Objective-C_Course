@@ -18,7 +18,7 @@ typedef NSInteger EMTabyretka;
 @interface EMStudent : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (assign, nonatomic) BOOL *isMale;
+@property (assign, nonatomic) BOOL isMale;
 @property (assign, nonatomic) EMGender gender;
 
 @end

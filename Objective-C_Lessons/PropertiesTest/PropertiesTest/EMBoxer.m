@@ -8,9 +8,8 @@
 
 #import "EMBoxer.h"
 
-
 @interface EMBoxer ()
-@property (assign, nonatomic) NSInteger nameCount;
+@property (assign, nonatomic) NSUInteger nameCount;
 @end
 
 @implementation EMBoxer
@@ -37,29 +36,27 @@
     _name = inputName;
 }
 
-
 - (NSString*) name {
     
     self.nameCount = self.nameCount + 1;
     //self.nameCount++;
     //self.nameCount += 1;
     
-    NSLog(@"name getter is called %d times", self.nameCount);
+    NSLog(@"name getter is called %ld times", self.nameCount);
     
     return _name;
 }
 
-- (NSInteger) age {
+- (NSUInteger) age {
     
     NSLog(@"age getter is called");
     
     return _age;
 }
 
-- (NSInteger) howOldAreYou {
+- (NSUInteger) howOldAreYou {
     //return self.age;
     return _age;
 }
-
 
 @end
