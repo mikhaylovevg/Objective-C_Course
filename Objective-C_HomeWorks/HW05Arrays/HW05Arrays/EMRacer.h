@@ -12,7 +12,5 @@
 
 @property (strong, nonatomic) NSString *car;
 @property (assign, nonatomic) NSUInteger age;
-//  age может быть отрицательным?
-
 
 @end
