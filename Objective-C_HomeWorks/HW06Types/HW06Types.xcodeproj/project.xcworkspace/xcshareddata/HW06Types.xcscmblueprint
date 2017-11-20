@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "FBD9FC81EA41E76F46CA337AC9CCECB177B91C9A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "FBD9FC81EA41E76F46CA337AC9CCECB177B91C9A" : 9223372036854775807,
+    "3E47A0E6BF7EE0F8C46CC79A618C5299882F12E8" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6179587B-5F74-4503-B569-C12C7635A735",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "FBD9FC81EA41E76F46CA337AC9CCECB177B91C9A" : "Objective-C_HomeWorks\/",
+    "3E47A0E6BF7EE0F8C46CC79A618C5299882F12E8" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HW06Types",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HW06Types\/HW06Types.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mikhaylovevg\/Objective-C_Course.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3E47A0E6BF7EE0F8C46CC79A618C5299882F12E8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mikhaylovevg\/Homeworks.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "FBD9FC81EA41E76F46CA337AC9CCECB177B91C9A"
+    }
+  ]
+}
