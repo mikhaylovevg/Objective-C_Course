@@ -1,8 +1,8 @@
 //
-//  EMStudent.h
+//  EMDancer.h
 //  07ProtocolsTest
 //
-//  Created by Evgeny Mikhaylov on 15.11.2017.
+//  Created by Evgeny Mikhaylov on 20.11.2017.
 //  Copyright © 2017 EM. All rights reserved.
 //
 
@@ -10,11 +10,11 @@
 
 #import "EMPatient.h"
 
-@interface EMStudent : NSObject <EMPatient>
+@interface EMDancer : NSObject <EMPatient>
 
-@property (strong, nonatomic) NSString *univercityName;
+@property (strong, nonatomic) NSString *fovoriteDance;
 @property (strong, nonatomic) NSString *name;
 
-- (void) study;
+- (void) dance;
 
 @end

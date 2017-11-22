@@ -9,11 +9,12 @@
 /* Begin PBXBuildFile section */
 		B212D1231FBC2527007FAE56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B212D1221FBC2527007FAE56 /* main.m */; };
 		B212D1261FBC2527007FAE56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B212D1251FBC2527007FAE56 /* AppDelegate.m */; };
-		B212D1291FBC2527007FAE56 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B212D1281FBC2527007FAE56 /* ViewController.m */; };
 		B212D12C1FBC2527007FAE56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212D12A1FBC2527007FAE56 /* Main.storyboard */; };
 		B212D12E1FBC2527007FAE56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B212D12D1FBC2527007FAE56 /* Assets.xcassets */; };
 		B212D1311FBC2527007FAE56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B212D12F1FBC2527007FAE56 /* LaunchScreen.storyboard */; };
 		B212D13A1FBC2704007FAE56 /* EMStudent.m in Sources */ = {isa = PBXBuildFile; fileRef = B212D1391FBC2704007FAE56 /* EMStudent.m */; };
+		B228DB221FC37892007352AB /* EMDancer.m in Sources */ = {isa = PBXBuildFile; fileRef = B228DB211FC37892007352AB /* EMDancer.m */; };
+		B228DB251FC37910007352AB /* EMDeveloper.m in Sources */ = {isa = PBXBuildFile; fileRef = B228DB241FC37910007352AB /* EMDeveloper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +22,17 @@
 		B212D1221FBC2527007FAE56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B212D1241FBC2527007FAE56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B212D1251FBC2527007FAE56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		B212D1271FBC2527007FAE56 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B212D1281FBC2527007FAE56 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		B212D12B1FBC2527007FAE56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B212D12D1FBC2527007FAE56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B212D1301FBC2527007FAE56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B212D1321FBC2528007FAE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B212D1381FBC2704007FAE56 /* EMStudent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMStudent.h; sourceTree = "<group>"; };
 		B212D1391FBC2704007FAE56 /* EMStudent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMStudent.m; sourceTree = "<group>"; };
+		B228DB201FC37892007352AB /* EMDancer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDancer.h; sourceTree = "<group>"; };
+		B228DB211FC37892007352AB /* EMDancer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDancer.m; sourceTree = "<group>"; };
+		B228DB231FC37910007352AB /* EMDeveloper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMDeveloper.h; sourceTree = "<group>"; };
+		B228DB241FC37910007352AB /* EMDeveloper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EMDeveloper.m; sourceTree = "<group>"; };
+		B228DB261FC37AA3007352AB /* EMPatient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMPatient.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,12 +65,15 @@
 		B212D1201FBC2527007FAE56 /* 07ProtocolsTest */ = {
 			isa = PBXGroup;
 			children = (
+				B228DB261FC37AA3007352AB /* EMPatient.h */,
+				B228DB231FC37910007352AB /* EMDeveloper.h */,
+				B228DB241FC37910007352AB /* EMDeveloper.m */,
 				B212D1381FBC2704007FAE56 /* EMStudent.h */,
 				B212D1391FBC2704007FAE56 /* EMStudent.m */,
+				B228DB201FC37892007352AB /* EMDancer.h */,
+				B228DB211FC37892007352AB /* EMDancer.m */,
 				B212D1241FBC2527007FAE56 /* AppDelegate.h */,
 				B212D1251FBC2527007FAE56 /* AppDelegate.m */,
-				B212D1271FBC2527007FAE56 /* ViewController.h */,
-				B212D1281FBC2527007FAE56 /* ViewController.m */,
 				B212D12A1FBC2527007FAE56 /* Main.storyboard */,
 				B212D12D1FBC2527007FAE56 /* Assets.xcassets */,
 				B212D12F1FBC2527007FAE56 /* LaunchScreen.storyboard */,
@@ -156,7 +163,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B212D1291FBC2527007FAE56 /* ViewController.m in Sources */,
+				B228DB251FC37910007352AB /* EMDeveloper.m in Sources */,
+				B228DB221FC37892007352AB /* EMDancer.m in Sources */,
 				B212D1261FBC2527007FAE56 /* AppDelegate.m in Sources */,
 				B212D1231FBC2527007FAE56 /* main.m in Sources */,
 				B212D13A1FBC2704007FAE56 /* EMStudent.m in Sources */,
@@ -318,6 +326,7 @@
 				B212D1371FBC2528007FAE56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
